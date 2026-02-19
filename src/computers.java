@@ -19,6 +19,6 @@ public class computers extends electronics {
 
     @Override
     public String toString() {
-        return "Product: " + name + " | Type: " + type + " | Late fee per day: " + currentLoanDays;
+        return super.toString();
     }
 }
