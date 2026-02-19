@@ -1,6 +1,6 @@
 public abstract class electronics extends items {
 
-    private String baseValue;
+    private int baseValue;
 
     // Constructor
     public electronics(int baseValue) {
@@ -17,11 +17,8 @@ public abstract class electronics extends items {
         this.baseValue = baseValue;
     }
 
-    // Polymorphic method
-    public abstract void loanItem();
-
     @Override
     public String toString() {
-        return "Product: " + name + " | Type: " + type + " ";
+        return super.toString();
     }
 }

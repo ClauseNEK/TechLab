@@ -28,14 +28,8 @@ public abstract class items {
         }
     }
 
-    //metode der printer og tager imod input. bør overrides i subclasses
-    public void loanItem(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Title");
-        String title = sc.nextLine();
-        System.out.println("Type");
-        String type = sc.nextLine();
-        System.out.println("Loan days");
-        double currentLoanDays = sc.nextDouble();
+    @Override
+    public String toString(){
+        return "Product: " + title + " | Type: " + type + " | Late fee per day: " + feePerDay;
     }
 }
