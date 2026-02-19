@@ -24,6 +24,6 @@ public class Main {
     }
 
 
-
+  System.out.println(" Hvilke Items vil du gerne låne: Book, video, electronics?");
 
 }
