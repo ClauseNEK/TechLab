@@ -30,6 +30,6 @@ public abstract class items {
 
     @Override
     public String toString(){
-        return title;
+        return "Product: " + title + " | Type: " + type + " | Late fee per day: " + feePerDay;
     }
 }
