@@ -1,2 +1,2 @@
-public class video {
+public class video extends items {
 }
