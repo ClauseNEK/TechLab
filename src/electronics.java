@@ -17,7 +17,7 @@ public abstract class electronics extends items {
         this.baseValue = baseValue;
     }
 
-    // Polymorphic method (VERY important)
+    // Polymorphic method
     public abstract void loanItem();
 
     @Override
