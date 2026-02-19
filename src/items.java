@@ -19,6 +19,13 @@ public abstract class items {
         this.feePerDay = feePerDay;
     }
 
+// getter til currentLoanDays - til book ihvertfald
+    public double getCurrentLoanDays() {
+        return currentLoanDays;
+    }
+
+
+
     //metode der udregner late fee. returnere 0 hvis låne perioden ikke er overskredet
     public double calculateLateFee(double maxLoanDays, double currentLoanDays, double feePerDay){
         if (currentLoanDays > maxLoanDays){
