@@ -1,6 +1,6 @@
 public abstract class electronics extends items {
 
-    private String baseValue;
+    private int baseValue;
 
     // Constructor
     public electronics(int baseValue) {
