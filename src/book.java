@@ -1,2 +1,2 @@
-public class book extends items {
+public class book {
 }

@@ -1,2 +1,2 @@
-public class items {
+public abstract class items {
 }
