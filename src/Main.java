@@ -9,17 +9,23 @@ public class Main {
         //første besked til bruger
         System.out.println("Hvor mange ting ville du låne?: ");
 
+        //tager imod input om antal udlån og gemmer det i count
+        int count = getCount(input);
+
+        //laver en items[] array ved at kører loanItems
+        loanItems(count, input);
     }
-    public int getCount(){
-        Scanner input = new Scanner(System.in);
+
+    //tager imod antal udlån
+    public static int getCount(Scanner input){
         int count = 0;
         count = input.nextInt();
         return count;
     }
 
-    public void loanItems(int count) {
+    public static items[] loanItems(int count, Scanner input) {
         for (int i = 0; i < count; i++) {
-            Scanner input = new Scanner(System.in);
+            items[] library = new items[count];
 
             System.out.println("\nUdlån #" + (i + 1));
 
@@ -32,10 +38,19 @@ public class Main {
             System.out.println("\nDage udlånt: ");
             double currentLoanDays = input.nextDouble();
 
-            // kopieret metode i PetAdoptionCenter
+            // reference: PetAdoptionCenter
             if (type.equalsIgnoreCase("bog")) {
-                books[i] = new book(title);
-            } else if (anden type)
+                library[i] = new book(title);
+            } else if (type.equalsIgnoreCase("video")) {
+                library[i] = new video(title);
+            } else if (type.equalsIgnoreCase("kit")) {
+                library[i] = new kit(title);
+            } else if (type.equalsIgnoreCase("computer")) {
+                library[i] = new computers(title);
+            } else {
+                System.out.println("Ukendt type.");
+                break;
+            }
 
         }
     }
