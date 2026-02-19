@@ -17,11 +17,8 @@ public abstract class electronics extends items {
         this.baseValue = baseValue;
     }
 
-    // Polymorphic method
-    public abstract void loanItem();
-
     @Override
     public String toString() {
-        return "Product: " + name + " | Type: " + type + " ";
+        return "Product: " + name + " | Type: " + type + " | Late fee per day: " + currentLoanDays;
     }
 }
