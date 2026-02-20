@@ -10,39 +10,39 @@ public abstract class items {
     private double feePerDay;
 
     //constructor
-    public items (String title, String type, boolean isLoaned, double currentLoanDays, double feePerDay){
+    public items (String title, String type, boolean isLoaned, double maxLoanDays, double currentLoanDays, double feePerDay){
         this.title = title;
         this.type = type;
         this.isLoaned = isLoaned;
+        this.maxLoanDays = maxLoanDays;
         this.currentLoanDays = currentLoanDays;
         this.feePerDay = feePerDay;
     }
 
-    //metode til at lave array, der skal overrides i hver subclass baseret på hvilke attributes de hver især har
-    public static items[] loanItems(int count, Scanner input) {
-        items[] library = new items[count];
 
-        for (int i = 0; i < count; i++) {
-            System.out.println("\nUdlån #" + (i + 1));
-
-            System.out.print("\nType (bog/video/kit/computer): ");
-            String type = input.nextLine();
-
-            System.out.print("\nTitle: ");
-            String title = input.nextLine();
-
-            System.out.println("\nDage udlånt: ");
-            double currentLoanDays = input.nextDouble();
-
-            library[i] = new book (title, type, currentLoanDays);
-        }
-        return library;
+    // Getters til vores Subclasses:
+    public String getTitle() {
+        return title;
     }
-
-// getter til currentLoanDays - til book ihvertfald
+    public String getType() {
+        return type;
+    }
+    public boolean isLoaned() {
+        return isLoaned;
+    }
+    public double getMaxLoanDays() {
+        return maxLoanDays;
+    }
     public double getCurrentLoanDays() {
         return currentLoanDays;
     }
+    public double getFeePerDay() {
+        return feePerDay;
+    }
+
+
+    //metode til at lave array, der skal overrides i hver subclass baseret på hvilke attributes de hver især har
+    // Fjernet og rykket over i Main da det vel er der den køres?
 
     //metode der udregner late fee. returnere 0 hvis låne perioden ikke er overskredet
     public double calculateLateFee(double maxLoanDays, double currentLoanDays, double feePerDay){
