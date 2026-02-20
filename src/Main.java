@@ -22,8 +22,4 @@ public class Main {
         count = input.nextInt();
         return count;
     }
-
-
-  System.out.println(" Hvilke Items vil du gerne låne: Book, video, electronics?");
-
 }
