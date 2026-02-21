@@ -3,8 +3,13 @@ public class kit extends electronics {
     private String kitLevel;
 
     // Constructor
-    public kit (String kitLevel) {
-        super();
+    public kit (String kitLevel, String title, String type, boolean isLoaned, double maxLoanDays, double currentLoanDays, double feePerDay) {
+        super(title,
+                type,
+                isLoaned,
+                maxLoanDays,
+                currentLoanDays,
+                feePerDay);
         this.kitLevel = kitLevel;
     }
 

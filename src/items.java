@@ -5,7 +5,7 @@ public abstract class items {
     private String title;
     private String type;
     private boolean isLoaned;
-    private final double maxLoanDays = 14;
+    private double maxLoanDays = 14;
     private double currentLoanDays;
     private double feePerDay;
 
