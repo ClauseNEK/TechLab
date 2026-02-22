@@ -15,8 +15,12 @@ getCurrentLoanDays()
 calculateLateFee()
  */
 
+import java.util.Scanner;
+
 public class book extends items {
     private String author;
+    Scanner input = new Scanner(System.in);
+
 
     // De er enkelte private da de kun er tilknyttet book og ikke de andre klasser
     private static final double maxLoanDays = 7;
@@ -32,6 +36,14 @@ public class book extends items {
     public String getAuthor() {
         return author;
     }
+
+//    public items[] loanBook(Scanner input, int count){
+//        items[] library = new items[count];
+//        System.out.println("\nAuthor:");
+//        String author = input.nextLine();
+//        library[1] = new book(title, type, currentLoanDays, author);
+//        return library;
+//    }
 
 //    @Override
 //    public String toString() {

@@ -36,6 +36,8 @@ public class Main {
             System.out.println("\nDage udlånt: ");
             double currentLoanDays = input.nextDouble();
 
+            input.nextLine();
+
             switch (type.toLowerCase()) {
                 case "bog":
                     System.out.println("\nAuthor:");
@@ -45,6 +47,7 @@ public class Main {
                 case "kit":
                     System.out.println("\nValue:");
                     int baseValue = input.nextInt();
+                    input.nextLine();
                     System.out.println("\nKit Level:");
                     String kitLevel = input.nextLine();
                     library[i] = new kit (title, type, currentLoanDays, baseValue, kitLevel);
