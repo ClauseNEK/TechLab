@@ -1,30 +1,25 @@
 public class video extends items {
-
-        private int days;
-        private String title;
+    private int duration;
 
 //Constructor
-public video(String title, String type,double currentLoanDays) {
-    super(title, type, currentLoanDays);
+public video(String title, String type,double currentLoanDays, int duration) {
+    super(title, type, currentLoanDays, 2);
+    this.duration = duration;
 }
 
-
 // Getter
-public String getName() { return title; }
-
-public int getInt() { return days ; }
+public int getDuration() { return duration ; }
 
  // Setter
 
-public void setName(String name) {this.title = name; }
-
-public void setDays(int days)  { this.days= days;}
+public void setDuration(int duration)  { this.duration= duration;}
 
 
    //Polymorphic method
-@Override
-    public String toString() {
-                return "Product: " + title + " | Days: " + days + " ";
-            }
-    }
+    //commented ud indtil vi finder ud af hvordan den skal fungere
+//@Override
+//    public String toString() {
+//                return "Product: " + title + " | Duration " + duration + " ";
+//            }
+}
 

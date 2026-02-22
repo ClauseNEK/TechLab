@@ -24,6 +24,7 @@ public class Main {
     public static items[] loanItems(int count, Scanner input) {
         items[] library = new items[count];
 
+        //for loop kører baseret på værdien af count, som bliver sat på linje 11
         for (int i = 0; i < count; i++) {
             System.out.println("\nUdlån #" + (i + 1));
 
@@ -36,27 +37,43 @@ public class Main {
             System.out.println("\nDage udlånt: ");
             double currentLoanDays = input.nextDouble();
 
-            input.nextLine();
+            //baseValue skal bruges i to forskellige cases (kit og computer) men må kun defineres en gang
+            //derfor defineres den inden switch'en
+            int baseValue;
 
+            //switch hvor case kommer an på hvilke type brugeren har skrevet ind på linje 30.
+            input.nextLine();
             switch (type.toLowerCase()) {
                 case "bog":
-                    System.out.println("\nAuthor:");
+                    System.out.println("\nAuthor: ");
                     String author = input.nextLine();
                     library[i] = new book(title, type, currentLoanDays, author);
                     break;
                 case "kit":
-                    System.out.println("\nValue:");
-                    int baseValue = input.nextInt();
+                    System.out.println("\nValue: ");
+                    baseValue = input.nextInt();
                     input.nextLine();
                     System.out.println("\nKit Level:");
                     String kitLevel = input.nextLine();
                     library[i] = new kit (title, type, currentLoanDays, baseValue, kitLevel);
                     break;
+                case "computer":
+                    System.out.println("\nValue: ");
+                    baseValue = input.nextInt();
+                    input.nextLine();
+                    System.out.println("\nModel: ");
+                    String model = input.nextLine();
+                    library[i] = new computers (title, type, currentLoanDays, baseValue, model);
+                    break;
+                case "video":
+                    System.out.println("\nDuration: ");
+                    int duration = input.nextInt();
+                    library[i] = new video (title, type, currentLoanDays, duration);
+                    break;
             }
         }
         return library;
     }
-            // If statements her - Det vel med hvis man vælger bog, video, computer eller kit
 
     //tager imod antal udlån
     public static int getCount(Scanner input){

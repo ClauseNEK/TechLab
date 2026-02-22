@@ -7,6 +7,7 @@ public class kit extends electronics {
         super(title,
                 type,
                 currentLoanDays,
+                3,
                 baseValue);
         this.kitLevel = kitLevel;
     }

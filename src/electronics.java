@@ -3,10 +3,11 @@ public abstract class electronics extends items {
     private int baseValue;
 
     // Constructor
-    public electronics(String title, String type, double currentLoanDays, int baseValue) {
+    public electronics(String title, String type, double currentLoanDays, double feePerDay, int baseValue) {
         super(title,
                 type,
-                currentLoanDays);
+                currentLoanDays,
+                feePerDay);
         this.baseValue = baseValue;
     }
 

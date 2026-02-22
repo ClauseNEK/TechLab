@@ -7,6 +7,7 @@ public class computers extends electronics {
         super(title,
                 type,
                 currentLoanDays,
+                15,
                 baseValue);
         this.model = model;
     }

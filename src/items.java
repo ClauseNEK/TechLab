@@ -10,15 +10,14 @@ public abstract class items {
     private double feePerDay;
 
     //constructor
-    public items (String title, String type, double currentLoanDays){
+    public items (String title, String type, double currentLoanDays, double feePerDay){
         this.title = title;
         this.type = type;
         //this.isLoaned = isLoaned;
         //this.maxLoanDays = maxLoanDays;
         this.currentLoanDays = currentLoanDays;
-        //this.feePerDay = feePerDay;
+        this.feePerDay = feePerDay;
     }
-
 
     // Getters til vores Subclasses:
     public String getTitle() {
@@ -40,14 +39,10 @@ public abstract class items {
         return feePerDay;
     }
 
-
-    //metode til at lave array, der skal overrides i hver subclass baseret på hvilke attributes de hver især har
-    // Fjernet og rykket over i Main da det vel er der den køres?
-
     //metode der udregner late fee. returnere 0 hvis låne perioden ikke er overskredet
     public double calculateLateFee(double maxLoanDays, double currentLoanDays, double feePerDay){
         if (currentLoanDays > maxLoanDays){
-        return currentLoanDays -= maxLoanDays * feePerDay;
+        return currentLoanDays - maxLoanDays * feePerDay;
         } else {
             return 0;
         }
@@ -55,6 +50,7 @@ public abstract class items {
 
     @Override
     public String toString(){
-        return "Product: " + title + " | Type: " + type + " | Late fee per day: " + feePerDay;
+        return "Product: " + title + " | Type: " + type + " | Late fee per day: "
+                + feePerDay;
     }
 }

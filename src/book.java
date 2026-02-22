@@ -19,16 +19,10 @@ import java.util.Scanner;
 
 public class book extends items {
     private String author;
-    Scanner input = new Scanner(System.in);
-
-
-    // De er enkelte private da de kun er tilknyttet book og ikke de andre klasser
-    private static final double maxLoanDays = 7;
-    private static final double feePerDay = 1.5;
 
     // Class Constructor
     public book(String title, String type, double currentLoanDays, String author) {
-        super(title, type, currentLoanDays);
+        super(title, type, currentLoanDays, 1.5);
         this.author = author;
     }
 
@@ -37,14 +31,7 @@ public class book extends items {
         return author;
     }
 
-//    public items[] loanBook(Scanner input, int count){
-//        items[] library = new items[count];
-//        System.out.println("\nAuthor:");
-//        String author = input.nextLine();
-//        library[1] = new book(title, type, currentLoanDays, author);
-//        return library;
-//    }
-
+    //commented ud indtil vi finder ud af hvordan den skal fungere
 //    @Override
 //    public String toString() {
 //        return "Title: " + getTitle()
