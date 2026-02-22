@@ -40,6 +40,14 @@ public class Main {
             System.out.print("\nType (bog/video/kit/computer): ");
             String type = input.nextLine();
 
+            //Samme while loop som på linje 14, dog bruger vi type og dotOperateren equals,
+            //Så hvis type ikke er lig med bog, video, kit eller computer, så printer den en fejl.
+            while (!type.equals("bog") && !type.equals("video") && !type.equals("kit") && !type.equals("computer")){
+                System.out.println("\nFejl! Indtast venligts en af følgende: bog, video, kit eller computer");
+                System.out.println("\nType (bog/video/kit/computer): ");
+            type = input.nextLine();
+            }
+
             System.out.print("\nTitle: ");
             String title = input.nextLine();
 
