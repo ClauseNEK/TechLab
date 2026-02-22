@@ -42,7 +42,7 @@ public abstract class items {
     //metode der udregner late fee. returnere 0 hvis låne perioden ikke er overskredet
     public double calculateLateFee(double maxLoanDays, double currentLoanDays, double feePerDay){
         if (currentLoanDays > maxLoanDays){
-        return currentLoanDays - maxLoanDays * feePerDay;
+        return (currentLoanDays - maxLoanDays) * feePerDay;
         } else {
             return 0;
         }
@@ -50,7 +50,7 @@ public abstract class items {
 
     @Override
     public String toString(){
-        return "Product: " + title + " | Type: " + type + " | Late fee per day: "
-                + feePerDay;
+        return "Product: " + type + " | Title: " + title + " | Maximum Loan Days: " + maxLoanDays + " | Late fee per day: "
+                + feePerDay + " | Late fee for " + currentLoanDays + " days: " + calculateLateFee(maxLoanDays, currentLoanDays, feePerDay);
     }
 }

@@ -8,7 +8,16 @@ public class Main {
 
         //første besked til bruger
         System.out.println("Hvor mange ting ville du låne?: ");
-        int count = input.nextInt();
+        int count = 0;
+
+        //While loop til hvis hasNextInt ikke er true så printer den en fejl.
+        while (!input.hasNextInt()) {
+            System.out.println("\nFejl! Indtast venligst et helt tal for at fortsætte. \n");
+            System.out.println("Hvor mange ting ville du låne?: ");
+            input.nextLine(); //ryder det invalide input fra brugeren
+        } //Går til toppen af while loopet igen
+
+        count = input.nextInt(); //Hvis input.hasNextInt er true så kører programmet videre og gemmer den læste int i count.
         input.nextLine(); // vigtig: spis newline
 
         items[] library = loanItems(count, input);
@@ -36,6 +45,7 @@ public class Main {
 
             System.out.println("\nDage udlånt: ");
             double currentLoanDays = input.nextDouble();
+            
 
             //baseValue skal bruges i to forskellige cases (kit og computer) men må kun defineres en gang
             //derfor defineres den inden switch'en
