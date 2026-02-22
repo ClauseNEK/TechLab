@@ -36,7 +36,20 @@ public class Main {
             System.out.println("\nDage udlånt: ");
             double currentLoanDays = input.nextDouble();
 
-            library[i] = new video (title, type, currentLoanDays);
+            switch (type.toLowerCase()) {
+                case "bog":
+                    System.out.println("\nAuthor:");
+                    String author = input.nextLine();
+                    library[i] = new book(title, type, currentLoanDays, author);
+                    break;
+                case "kit":
+                    System.out.println("\nValue:");
+                    int baseValue = input.nextInt();
+                    System.out.println("\nKit Level:");
+                    String kitLevel = input.nextLine();
+                    library[i] = new kit (title, type, currentLoanDays, baseValue, kitLevel);
+                    break;
+            }
         }
         return library;
     }
