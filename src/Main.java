@@ -14,7 +14,7 @@ public class Main {
         while (!input.hasNextInt()) {
             System.out.println("\nFejl! Indtast venligst et helt tal for at fortsætte. \n");
             System.out.println("Hvor mange ting ville du låne?: ");
-            input.nextLine(); //ryder det invalide input fra brugeren
+            input.nextLine(); //ryder det invalide input fra bufferen
         } //Går til toppen af while loopet igen
 
         count = input.nextInt(); //Hvis input.hasNextInt er true så kører programmet videre og gemmer den læste int i count.
