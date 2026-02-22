@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays; //Importerer arrays util - vi bruger Arrays.sort til at sortere vores array alfabetisk
 
 public class Main {
 
@@ -20,7 +21,11 @@ public class Main {
         count = input.nextInt(); //Hvis input.hasNextInt er true så kører programmet videre og gemmer den læste int i count.
         input.nextLine(); // vigtig: spis newline
 
+        //Opretter vores Array og kalder det library
         items[] library = loanItems(count, input);
+
+        //Sorterer vores array alfabetisk ved at sammenligne item1 og item2's titler.
+        Arrays.sort(library, (item1,item2) -> item1.getTitle().compareTo(item2.getTitle()));
 
         // Her printer den vores Udlån
         for (items it : library) {
