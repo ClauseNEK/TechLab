@@ -4,8 +4,8 @@ public class video extends items {
         private String title;
 
 //Constructor
-public video(String title, String type, boolean isLoaned, double maxLoanDays, double currentLoanDays, double feePerDay) {
-    super(title, type, isLoaned, maxLoanDays, currentLoanDays, feePerDay);
+public video(String title, String type,double currentLoanDays) {
+    super(title, type, currentLoanDays);
 }
 
 

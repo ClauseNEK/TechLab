@@ -11,7 +11,7 @@ public class Main {
         int count = input.nextInt();
         input.nextLine(); // vigtig: spis newline
 
-        Items[] library = loanItems(count, input);
+        items[] library = loanItems(count, input);
 
         // Her printer den vores Udlån
         for (items it : library) {
@@ -36,7 +36,7 @@ public class Main {
             System.out.println("\nDage udlånt: ");
             double currentLoanDays = input.nextDouble();
 
-            library[i] = new book (title, type, currentLoanDays);
+            library[i] = new video (title, type, currentLoanDays);
         }
         return library;
     }

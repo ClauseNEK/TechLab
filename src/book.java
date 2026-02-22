@@ -23,8 +23,8 @@ public class book extends items {
     private static final double feePerDay = 1.5;
 
     // Class Constructor
-    public book(String title, String author, double currentLoanDays) {
-        super(title, "book", true, maxLoanDays, currentLoanDays, feePerDay);
+    public book(String title, String type, double currentLoanDays, String author) {
+        super(title, type, currentLoanDays);
         this.author = author;
     }
 
@@ -33,12 +33,12 @@ public class book extends items {
         return author;
     }
 
-    @Override
-    public String toString() {
-        return "Title: " + getTitle()
-                + " Loan Days: " + getCurrentLoanDays() // Inde i items er getteren tilføjet:
-                + " Author: " + author
-                + " Fee Total: " + calculateLateFee();
-
-    }
+//    @Override
+//    public String toString() {
+//        return "Title: " + getTitle()
+//                + " Loan Days: " + getCurrentLoanDays() // Inde i items er getteren tilføjet:
+//                + " Author: " + author
+//                + " Fee Total: " + calculateLateFee(maxLoanDays, currentLoanDays, feePerDay);
+//
+//    }
 }

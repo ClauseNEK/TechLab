@@ -3,14 +3,11 @@ public class computers extends electronics {
     private String model;
 
     // Constructor
-    public computers(String model, int baseValue, String title, String type, boolean isLoaned, double maxLoanDays, double currentLoanDays, double feePerDay) {
+    public computers(String title, String type, double currentLoanDays, int baseValue, String model) {
         super(title,
-                baseValue,
                 type,
-                isLoaned,
-                maxLoanDays,
                 currentLoanDays,
-                feePerDay);
+                baseValue);
         this.model = model;
     }
 

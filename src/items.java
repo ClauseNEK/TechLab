@@ -10,13 +10,13 @@ public abstract class items {
     private double feePerDay;
 
     //constructor
-    public items (String title, String type, boolean isLoaned, double maxLoanDays, double currentLoanDays, double feePerDay){
+    public items (String title, String type, double currentLoanDays){
         this.title = title;
         this.type = type;
-        this.isLoaned = isLoaned;
-        this.maxLoanDays = maxLoanDays;
+        //this.isLoaned = isLoaned;
+        //this.maxLoanDays = maxLoanDays;
         this.currentLoanDays = currentLoanDays;
-        this.feePerDay = feePerDay;
+        //this.feePerDay = feePerDay;
     }
 
 
