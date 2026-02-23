@@ -5,7 +5,7 @@ public abstract class items {
     private String title;
     private String type;
     private boolean isLoaned;
-    private double maxLoanDays = 14;
+    private final double maxLoanDays = 14;
     private double currentLoanDays;
     private double feePerDay;
 
@@ -51,6 +51,6 @@ public abstract class items {
     @Override
     public String toString(){
         return "Product: " + type + " | Title: " + title + " | Maximum Loan Days: " + maxLoanDays + " | Late fee per day: "
-                + feePerDay + " | Late fee for " + currentLoanDays + " days: " + calculateLateFee(maxLoanDays, currentLoanDays, feePerDay);
+                + feePerDay + " | Late fee for " + currentLoanDays + " days: " + calculateLateFee(maxLoanDays, currentLoanDays, feePerDay) + " kr.";
     }
 }
