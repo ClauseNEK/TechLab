@@ -12,17 +12,36 @@ public class Main {
         System.out.println("----------------------------------");
         System.out.println("Hvor mange ting ville du låne?: ");
         int count = 0;
+        boolean validInput = false;
 
-        //While loop til hvis hasNextInt ikke er true så printer den en fejl.
-        while (!input.hasNextInt() || input.hasNextInt() && input.nextInt() <= 0) {
-            System.out.println("\nFejl! Indtast venligst et helt positivt tal for at fortsætte. \n");
-            System.out.println("Hvor mange ting ville du låne?: ");
-            input.nextLine(); //ryder det invalide input fra bufferen
-        } //Går til toppen af while loopet igen
+        while (!validInput) {
+            if (!input.hasNextInt()) {
+                System.out.println("Fejl: Indtast venligst et helt tal!");
+                input.nextLine();
+            } else {
+                count = input.nextInt();
+                if (count <= 0) {
+                    System.out.println("Fejl: Tallet skal være større end 0!");
+                    input.nextLine();
+                } else {
+                    validInput = true;
+                }
+            }
+        }
+        input.nextLine();
 
 
-        count = input.nextInt(); //Hvis input.hasNextInt er true så kører programmet videre og gemmer den læste int i count.
-        input.nextLine(); // vigtig: spis newline
+        //Har kommenteret dette stykke ud da den tjekker 2 input og derfor ikke kører før der er lavet 2 input. Har indsat nyt while loop med if/else statements ovenover.
+//        //While loop til hvis hasNextInt ikke er true så printer den en fejl.
+//        while (!input.hasNextInt() || input.hasNextInt() && input.nextInt() <= 0) {
+//            System.out.println("\nFejl! Indtast venligst et helt positivt tal for at fortsætte. \n");
+//            System.out.println("Hvor mange ting ville du låne?: ");
+//            input.nextLine(); //ryder det invalide input fra bufferen
+//        } //Går til toppen af while loopet igen
+//
+//
+//        count = input.nextInt(); //Hvis input.hasNextInt er true så kører programmet videre og gemmer den læste int i count.
+//        input.nextLine(); // vigtig: spis newline
 
         //Opretter vores Array og kalder det library
         items[] library = loanItems(count, input);
