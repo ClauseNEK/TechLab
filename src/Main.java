@@ -106,8 +106,13 @@ public class Main {
                     System.out.println("\nValue: ");
                     baseValue = input.nextInt();
                     input.nextLine();
-                    System.out.println("\nKit Level:");
                     String kitLevel = input.nextLine();
+                    System.out.println("\nKit Level (Beginner/Advanced):");
+
+                    while (!kitLevel.equals("beginner") && !kitLevel.equals("advanced")) {
+                        System.out.println("Fejl: Indtast venligst beginner eller advanced!");
+                        kitLevel = input.nextLine().toLowerCase();
+                    }
                     library[i] = new kit (title, type, currentLoanDays, baseValue, kitLevel);
                     break;
                 case "computer":
