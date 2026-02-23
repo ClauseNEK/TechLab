@@ -122,6 +122,7 @@ public class Main {
                     break;
             }
         }
+        System.out.println("Sorted Loan Items: \n" + "--------------------\n");
         return library;
     }
 

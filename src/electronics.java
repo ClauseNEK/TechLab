@@ -25,6 +25,7 @@ public abstract class electronics extends items {
 
     @Override
     public String toString() {
+
         return super.toString();
     }
 }
