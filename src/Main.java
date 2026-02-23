@@ -60,6 +60,7 @@ public class Main {
         for (items it : library) {
             System.out.println(it);
         }
+        System.out.println("Summary: \n" + "You borrowed " + library.length + " item(s) today");
     }
 
     // Nu begynder vi på output delen:
@@ -106,8 +107,8 @@ public class Main {
                     System.out.println("\nValue: ");
                     baseValue = input.nextInt();
                     input.nextLine();
-                    String kitLevel = input.nextLine();
                     System.out.println("\nKit Level (Beginner/Advanced):");
+                    String kitLevel = input.nextLine().toLowerCase();
 
                     while (!kitLevel.equals("beginner") && !kitLevel.equals("advanced")) {
                         System.out.println("Fejl: Indtast venligst beginner eller advanced!");
@@ -135,6 +136,7 @@ public class Main {
         }
         System.out.println("Sorted Loan Items: \n" + "--------------------\n");
         return library;
+
     }
 
     //tager imod antal udlån
