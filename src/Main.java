@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays; //Importerer arrays util - vi bruger Arrays.sort til at sortere vores array alfabetisk
 
 public class Main {
 
@@ -46,8 +45,16 @@ public class Main {
         //Opretter vores Array og kalder det library
         items[] library = loanItems(count, input);
 
-        //Sorterer vores array alfabetisk ved at sammenligne item1 og item2's titler. (Algoritme)
-        Arrays.sort(library, (item1,item2) -> item1.getTitle().compareTo(item2.getTitle()));
+        // Bubblesort alfabetisk efter titel
+        for (int i = 0; i < library.length - 1; i++) {
+            for (int j = 0; j < library.length - 1 - i; j++) {
+                if (library[j].getTitle().compareTo(library[j + 1].getTitle()) > 0) {
+                    items temp = library[j];
+                    library[j] = library[j + 1];
+                    library[j + 1] = temp;
+                }
+            }
+        }
 
         // Her printer den vores Udlån
         for (items it : library) {
@@ -89,7 +96,6 @@ public class Main {
             //switch hvor case kommer an på hvilke type brugeren har skrevet ind på linje 30.
             input.nextLine();
 
-            //Bruger dot operater til at lave om til små bogstaver, så den ikke længere er case sensitive.
             switch (type.toLowerCase()) {
                 case "bog":
                     System.out.println("\nAuthor: ");
@@ -132,4 +138,5 @@ public class Main {
         count = input.nextInt();
         return count;
     }
-}
+
+    }
