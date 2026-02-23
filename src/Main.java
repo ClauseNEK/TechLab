@@ -46,7 +46,7 @@ public class Main {
             System.out.println("\nUdlån #" + (i + 1));
 
             System.out.print("\nType (bog/video/kit/computer): ");
-            String type = input.nextLine();
+            String type = input.nextLine().toLowerCase();
 
             //Teknisk set samme while loop som på linje 14, dog bruger vi type og dotOperateren equals,
             //som gør at hvis type ikke er lig med bog, video, kit eller computer, så printer den en fejl.
