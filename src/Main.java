@@ -95,6 +95,9 @@ public class Main {
                 case "video":
                     System.out.println("\nDuration: ");
                     int duration = input.nextInt();
+                    input.nextLine();
+                    //Tilføjer input.nextline(); for at cleare bufferen så
+                    // vi ikke modtager fejlbeskeden fra ovenstående while loop
                     library[i] = new video (title, type, currentLoanDays, duration);
                     break;
             }
