@@ -14,16 +14,19 @@ public class kit extends electronics {
 
     // Getter
     public String getKitLevel() {
+
         return kitLevel;
     }
 
     // Setter
     public void setKitLevel(String kitLevel) {
+
         this.kitLevel = kitLevel;
     }
 
     @Override
     public String toString() {
+
         return super.toString();
     }
 }

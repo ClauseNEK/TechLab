@@ -13,11 +13,13 @@ public abstract class electronics extends items {
 
     // Getter
     public int getBaseValue() {
+
         return baseValue;
     }
 
     // Setter
     public void setBaseValue(int baseValue) {
+
         this.baseValue = baseValue;
     }
 

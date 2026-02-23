@@ -8,6 +8,8 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         //første besked til bruger
+        System.out.println("Velkommen til TechLabs lånesystem!");
+        System.out.println("----------------------------------");
         System.out.println("Hvor mange ting ville du låne?: ");
         int count = 0;
 
@@ -24,7 +26,7 @@ public class Main {
         //Opretter vores Array og kalder det library
         items[] library = loanItems(count, input);
 
-        //Sorterer vores array alfabetisk ved at sammenligne item1 og item2's titler.
+        //Sorterer vores array alfabetisk ved at sammenligne item1 og item2's titler. (Algoritme)
         Arrays.sort(library, (item1,item2) -> item1.getTitle().compareTo(item2.getTitle()));
 
         // Her printer den vores Udlån
@@ -66,6 +68,8 @@ public class Main {
 
             //switch hvor case kommer an på hvilke type brugeren har skrevet ind på linje 30.
             input.nextLine();
+
+            //Bruger dot operater til at lave om til små bogstaver, så den ikke længere er case sensitive.
             switch (type.toLowerCase()) {
                 case "bog":
                     System.out.println("\nAuthor: ");

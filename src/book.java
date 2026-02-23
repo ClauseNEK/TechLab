@@ -32,12 +32,8 @@ public class book extends items {
     }
 
     //commented ud indtil vi finder ud af hvordan den skal fungere
-//    @Override
-//    public String toString() {
-//        return "Title: " + getTitle()
-//                + " Loan Days: " + getCurrentLoanDays() // Inde i items er getteren tilføjet:
-//                + " Author: " + author
-//                + " Fee Total: " + calculateLateFee(maxLoanDays, currentLoanDays, feePerDay);
-//
-//    }
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

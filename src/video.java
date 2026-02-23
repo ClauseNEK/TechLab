@@ -8,18 +8,22 @@ public video(String title, String type,double currentLoanDays, int duration) {
 }
 
 // Getter
-public int getDuration() { return duration ; }
+public int getDuration() {
+    return duration ;
+}
 
  // Setter
 
-public void setDuration(int duration)  { this.duration= duration;}
+public void setDuration(int duration)  {
+    this.duration= duration;
+}
 
 
    //Polymorphic method
     //commented ud indtil vi finder ud af hvordan den skal fungere
-//@Override
-//    public String toString() {
-//                return "Product: " + title + " | Duration " + duration + " ";
-//            }
+@Override
+    public String toString() {
+                return super.toString();
+            }
 }
 
