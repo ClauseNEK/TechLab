@@ -14,6 +14,6 @@ public class book extends items {
 
     @Override
     public String toString() {
-        return super.toString() + "\nForfatter: " + getAuthor();
+        return super.toString() + "\nForfatter: " + getAuthor() + "\n";
     }
 }
