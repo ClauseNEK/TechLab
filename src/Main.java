@@ -37,7 +37,7 @@ public class Main {
 
         // Her printer den vores Udlån
         for (items it : library) {
-            System.out.println(it);
+            System.out.println(it.toString());
         }
         System.out.println("Summary: \n" + "You borrowed " + library.length + " item(s) today");
     }
