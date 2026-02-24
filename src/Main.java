@@ -113,7 +113,7 @@ public class Main {
                     break;
             }
         }
-        System.out.println("Sorted Loan Items: \n" + "--------------------\n");
+        System.out.println("\nSorted Loan Items: \n" + "--------------------\n");
         return library;
     }
 
