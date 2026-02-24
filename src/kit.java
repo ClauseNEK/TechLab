@@ -27,6 +27,6 @@ public class kit extends electronics {
     @Override
     public String toString() {
 
-        return super.toString();
+        return super.toString() + "\nBaseValue: " + getBaseValue() + " kr." + "\nKit Level: " + getKitLevel();
     }
 }

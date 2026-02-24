@@ -24,6 +24,6 @@ public class computers extends electronics {
 
     @Override
     public String toString() {
-        return super.toString();
+        return super.toString() + "\nBaseValue: " + getBaseValue() + " kr." + "\nModel: " + getModel();
     }
 }
