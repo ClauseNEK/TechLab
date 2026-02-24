@@ -13,14 +13,11 @@ public int getDuration() {
 }
 
  // Setter
-
 public void setDuration(int duration)  {
     this.duration= duration;
 }
 
-
    //Polymorphic method
-    //commented ud indtil vi finder ud af hvordan den skal fungere
 @Override
     public String toString() {
                 return super.toString();

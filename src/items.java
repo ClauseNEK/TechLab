@@ -4,7 +4,6 @@ public abstract class items {
     //attributes
     private String title;
     private String type;
-    private boolean isLoaned;
     private final double maxLoanDays = 14;
     private double currentLoanDays;
     private double feePerDay;
@@ -13,8 +12,6 @@ public abstract class items {
     public items (String title, String type, double currentLoanDays, double feePerDay){
         this.title = title;
         this.type = type;
-        //this.isLoaned = isLoaned;
-        //this.maxLoanDays = maxLoanDays;
         this.currentLoanDays = currentLoanDays;
         this.feePerDay = feePerDay;
     }
@@ -25,9 +22,6 @@ public abstract class items {
     }
     public String getType() {
         return type;
-    }
-    public boolean isLoaned() {
-        return isLoaned;
     }
     public double getMaxLoanDays() {
         return maxLoanDays;

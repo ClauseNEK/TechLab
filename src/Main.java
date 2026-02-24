@@ -29,19 +29,6 @@ public class Main {
         }
         input.nextLine();
 
-
-        //Har kommenteret dette stykke ud da den tjekker 2 input og derfor ikke kører før der er lavet 2 input. Har indsat nyt while loop med if/else statements ovenover.
-//        //While loop til hvis hasNextInt ikke er true så printer den en fejl.
-//        while (!input.hasNextInt() || input.hasNextInt() && input.nextInt() <= 0) {
-//            System.out.println("\nFejl! Indtast venligst et helt positivt tal for at fortsætte. \n");
-//            System.out.println("Hvor mange ting ville du låne?: ");
-//            input.nextLine(); //ryder det invalide input fra bufferen
-//        } //Går til toppen af while loopet igen
-//
-//
-//        count = input.nextInt(); //Hvis input.hasNextInt er true så kører programmet videre og gemmer den læste int i count.
-//        input.nextLine(); // vigtig: spis newline
-
         //Opretter vores Array og kalder det library
         items[] library = loanItems(count, input);
 
@@ -64,7 +51,6 @@ public class Main {
     }
 
     // Nu begynder vi på output delen:
-
     public static items[] loanItems(int count, Scanner input) {
         items[] library = new items[count];
 
@@ -77,10 +63,12 @@ public class Main {
 
             //Teknisk set samme while loop som på linje 14, dog bruger vi type og dotOperateren equals,
             //som gør at hvis type ikke er lig med bog, video, kit eller computer, så printer den en fejl.
-            while (!type.equals("bog") && !type.equals("video") && !type.equals("kit") && !type.equals("computer")){
+            while (!type.equals("bog") && !type.equals("video")
+                    && !type.equals("kit") && !type.equals("computer"))
+            {
                 System.out.println("\nFejl! Indtast venligst en af følgende: bog, video, kit eller computer");
                 System.out.println("\nType (bog/video/kit/computer): ");
-            type = input.nextLine();
+                type = input.nextLine();
             }
 
             System.out.print("\nTitle: ");
@@ -88,7 +76,6 @@ public class Main {
 
             System.out.println("\nDage udlånt: ");
             double currentLoanDays = input.nextDouble();
-            
 
             //baseValue skal bruges i to forskellige cases (kit og computer) men må kun defineres en gang
             //derfor defineres den inden switch'en
@@ -136,14 +123,5 @@ public class Main {
         }
         System.out.println("Sorted Loan Items: \n" + "--------------------\n");
         return library;
-
     }
-
-    //tager imod antal udlån
-    public static int getCount(Scanner input){
-        int count = 0;
-        count = input.nextInt();
-        return count;
-    }
-
     }
