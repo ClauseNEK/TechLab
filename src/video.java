@@ -20,7 +20,7 @@ public void setDuration(int duration)  {
    //Polymorphic method
 @Override
     public String toString() {
-                return super.toString() + "\n videoens længde (minutter): " + getDuration()  + "\n";
+                return super.toString() + "\nVideoens længde (minutter): " + getDuration()  + "\n";
             }
 }
 

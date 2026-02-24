@@ -44,7 +44,7 @@ public abstract class items {
 
     @Override
     public String toString(){
-        return "Product: " + type + " | Title: " + title + " | Maximum Loan Days: " + maxLoanDays + " | Late fee per day: "
+        return "Product: " + type + "\n| Title: " + title + " | Maximum Loan Days: " + maxLoanDays + "\n| Late fee per day: "
                 + feePerDay + " | Late fee for " + currentLoanDays + " days: " + calculateLateFee(maxLoanDays, currentLoanDays, feePerDay) + " kr.";
     }
 }
