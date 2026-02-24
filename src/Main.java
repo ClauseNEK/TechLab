@@ -33,15 +33,7 @@ public class Main {
         items[] library = loanItems(count, input);
 
         // Bubblesort alfabetisk efter titel
-        for (int i = 0; i < library.length - 1; i++) {
-            for (int j = 0; j < library.length - 1 - i; j++) {
-                if (library[j].getTitle().compareTo(library[j + 1].getTitle()) > 0) {
-                    items temp = library[j];
-                    library[j] = library[j + 1];
-                    library[j + 1] = temp;
-                }
-            }
-        }
+        sortItems(library);
 
         // Her printer den vores Udlån
         for (items it : library) {
@@ -50,7 +42,7 @@ public class Main {
         System.out.println("Summary: \n" + "You borrowed " + library.length + " item(s) today");
     }
 
-    // Nu begynder vi på output delen:
+    // Tager imod bruger input og gemmer det i library array
     public static items[] loanItems(int count, Scanner input) {
         items[] library = new items[count];
 
@@ -123,5 +115,18 @@ public class Main {
         }
         System.out.println("Sorted Loan Items: \n" + "--------------------\n");
         return library;
+    }
+
+    // Bubblesort alfabetisk efter titel
+    public static void sortItems(items[] library) {
+        for (int i = 0; i < library.length - 1; i++) {
+            for (int j = 0; j < library.length - 1 - i; j++) {
+                if (library[j].getTitle().compareTo(library[j + 1].getTitle()) > 0) {
+                    items temp = library[j];
+                    library[j] = library[j + 1];
+                    library[j + 1] = temp;
+                }
+            }
+        }
     }
     }
